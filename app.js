@@ -1,5 +1,6 @@
 var sha512 = require('js-sha512');
 var moment = require('moment')
+var path = require('path')
 
 //initialize micro-database to save session data and configuration file
 var config = require('./config.json');
@@ -130,10 +131,15 @@ io.on('connection', function (socket) {
                             clientId: socket.id,
                             address: socket.handshake.address
                         })
+
                         clientToken = token;
                         socket.emit('login_success', {
                             message: 'Login success',
                             token: token
+                        })
+
+                        socket.emit('manage_data', {
+                            
                         })
                         isLogin = true;
                         console.log("Client " + socket.id + " logged in");
@@ -188,6 +194,13 @@ io.on('connection', function (socket) {
                             console.log("Configuration saved")
                         }
                     })
+                    var json = {
+                        type: 'control',
+                        value: config.control_config
+                    }
+                    var buff = JSON.stringify(json);
+                    udpServer.send(buff, 0, buff.length, udpPort, BOARD_ADDRESS);
+
                 } else {
                     socket.emit('err', {
                         error: "Unauthorization",
@@ -326,8 +339,9 @@ io.on('error', function (error) {
 });
 
 app.get('/', function(req, res) {
-    return res.json({
-        status: "OK",
-        time: new Date().toJSON()
-    })
+    return res.json({})
+})
+
+app.get('/authorize', function(req, res) {
+    return res.json({})
 })

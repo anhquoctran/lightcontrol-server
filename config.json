@@ -1,1 +1,18 @@
-{"interval_update":3000,"credential":{"username":"admin","password":"d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db"},"control_config":{"dow_set":[0,0,0,0,0,0,0],"end_h":0,"end_m":0,"light_state":false,"control_mode":true,"start_h":0,"start_m":0,"sensor_mode":true}}
+{
+    "interval_update": 3000,
+    "credential": {
+        "username": "admin",
+        "password": "d404559f602eab6fd602ac7680dacbfaadd13630335e951f097af3900e9de176b6db28512f2e000b9d04fba5133e8b1c6e8df59db3a8ab9d60be4b97cc9e81db"
+    },
+    "security_code": 1234,
+    "control_config": {
+        "dow_set": [0, 0, 0, 0, 0, 0, 0],
+        "end_h": 0,
+        "end_m": 0,
+        "light_state": false,
+        "control_mode": true,
+        "start_h": 0,
+        "start_m": 0,
+        "sensor_mode": true
+    }
+}

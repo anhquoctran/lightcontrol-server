@@ -14,10 +14,14 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
+    "flash": "^1.1.0",
     "js-sha512": "^0.8.0",
     "lokijs": "^1.5.5",
     "moment": "^2.22.2",
     "morgan": "^1.9.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.3",
     "qs": "^6.5.2",
     "socket.io": "^2.1.1"
   }
